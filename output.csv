@@ -1,0 +1,12 @@
+Name,Age,City,Email,IsAdult
+John Doe,19,New York,john.doe@example.com,true
+Alice Brown,21,Seattle,alice.brown@example.com,true
+Samantha Lee,28,San Francisco,samantha.lee@example.com,true
+Emily Chen,19,Houston,emily.chen@example.com,true
+David Rodriguez,26,Miami,david.rodriguez@example.com,true
+Maggie Wong,16,San Diego,maggie.wong@example.com,false
+Maxwell Hernandez,18,Dallas,maxwell.hernandez@example.com,true
+Lily Nguyen,29,Denver,lily.nguyen@example.com,true
+Aaron Patel,24,Minneapolis,aaron.patel@example.com,true
+Katherine Kim,27,Philadelphia,katherine.kim@example.com,true
+Caroline Lambert,29,California,caroline.lambert@example.com,true
