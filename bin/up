@@ -2,3 +2,25 @@
 
 # Start the server
 docker-compose up -d
+
+# Check if the container is up and running
+container_status=$(docker ps --filter "name=automation" --format "{{.Status}}")
+if [ -z "$container_status" ]; then
+    echo "The automation container is not running!"
+    exit 1
+fi
+
+if [ ! -d "node_modules" ]; then
+  mkdir node_modules
+  touch node_modules/.gitkeep
+  bin/down
+  bin/build
+  bin/up
+fi
+
+# Check if the node_modules folder is empty
+node_modules_files_count=$(find node_modules -type f -not -name '.gitkeep' | wc -l)
+if [ "$node_modules_files_count" -eq 0 ]; then
+    echo "The node_modules folder is empty, running bin/npm-install..."
+    bin/npm-install
+fi

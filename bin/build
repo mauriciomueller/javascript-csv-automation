@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Build the container with no cache
+docker-compose build --no-cache

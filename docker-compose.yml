@@ -1,7 +1,11 @@
 version: '3.7'
 services:
   app:
-    build: .
+    build:
+      context: .
+      args:
+        USER_ID: 1001
+        GROUP_ID: 1001
     command: tail -f /dev/null
     volumes:
       - ./package.json:/app/package.json
