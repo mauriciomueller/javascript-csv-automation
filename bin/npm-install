@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Install dependencies
+docker exec -it automation npm install
