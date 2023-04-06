@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  app:
+    build: .
+    command: tail -f /dev/null
+    volumes:
+      - ./package.json:/app/package.json
+      - ./package-lock.json:/app/package-lock.json
+      - ./input.csv:/app/input.csv
+      - ./output.csv:/app/output.csv
+      - ./csv-automation.js:/app/csv-automation.js
+      - ./node_modules:/app/node_modules
+    container_name: automation
